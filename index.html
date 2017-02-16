@@ -15,7 +15,7 @@
     function setup(){
         var canWidth = 500;
         var canHeight = 500;
-        song = loadSound("A.mp3",callMeOnceLoad);
+        song = loadSound("EkPal.mp3",callMeOnceLoad);
         createCanvas(canWidth,canHeight);
         background('black');
         //console.log("i will call only once...");
@@ -25,9 +25,9 @@
         amp = new p5.Amplitude();
         
     }    
-        
+     var result = 1;   
     function changeDirection(){
-        var result = 1;
+        
         if(amp){
         result = amp.getLevel();
         console.log("Amp ",result);    
@@ -50,6 +50,8 @@
     }    
     function draw(){
         background('black');
+        fill('red');
+        ellipse(100,100,50 + 100* result,50);
         fill((random(255),random(255),random(255)));
         ellipse(x,y,50,50);
         
