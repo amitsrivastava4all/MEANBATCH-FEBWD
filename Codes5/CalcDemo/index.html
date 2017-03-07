@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Calc App</title>
+	<script src="js/calc.js"></script>
+	<script src="js/controller.js"> </script>
+	<style>
+		.red{
+			color:red;
+		}
+	</style>
+</head>
+<body>
+<h1>MVC App</h1>
+<p>this is a view and it contain only design</p>
+	<table >
+		<tr>
+			<td><label for="">First No</label></td>
+			<td><input type="text" placeholder="Type First No" id="firstNo">
+			<span id="firsterror" class="red"></span>
+			</td>
+		</tr>
+		<tr>
+			<td><label for="">Second No</label></td>
+			<td><input type="text" placeholder="Type Second No" id="secondNo">
+			<span id="seconderror" class="red"></span>
+			</td>
+		</tr>
+		<tr>
+		<td colspan="2">
+			<table>
+				<tr>
+					<td><button class="operation" 
+					data-operation="add"
+					id="addBt">+</button></td>
+			<td><button data-operation="subtract" class="operation" id ="subBt">-</button></td>
+			<td><button data-operation="multiply" class="operation">*</button></td>
+			<td><button data-operation="divide" class="operation">/</button></td>
+			<td><button>Clear</button></td>
+				</tr>
+			</table>
+			
+		</td>
+			
+		</tr>
+		
+	</table>
+	<h1>Result is <span id="result"></span></h1>
+</body>
+</html>
