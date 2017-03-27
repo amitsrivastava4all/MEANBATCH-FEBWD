@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	
+<script src="https://www.gstatic.com/firebasejs/3.7.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAb6aGEZ8yKqpJJUh_aoYJtnWeYqE9cbXg",
+    authDomain: "quiz-955f0.firebaseapp.com",
+    databaseURL: "https://quiz-955f0.firebaseio.com",
+    storageBucket: "quiz-955f0.appspot.com",
+    messagingSenderId: "535775966209"
+  };
+  firebase.initializeApp(config);
+</script>
+<script src="js/login.js"></script>
+</head>
+<body>
+	<table>
+		<tr>
+			<td><label for="">Userid</label></td>
+			<td><input type="text" id="userid" placeholder="Type Userid here"></td>
+		</tr>
+		<tr>
+			<td><label for="">Password</label></td>
+			<td><input type="password" id="pwd" placeholder="Type Password here"></td>
+		</tr>
+		<tr>
+			<td><button id="loginBt">Login</button></td>
+			<td><button>Reset</button></td>
+		</tr>
+	</table>
+</body>
+</html>
