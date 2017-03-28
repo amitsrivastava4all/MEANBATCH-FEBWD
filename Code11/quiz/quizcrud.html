@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Quiz CRUD</title>
+	<link rel="stylesheet" href="css/design.css">
+	<script src="js/models/question.js"></script>
+	<script src="js/models/questionoperation.js"></script>
+	<script src="js/controllers/controller.js"></script>
+</head>
+<body>
+	<fieldset>
+		<legend>Quiz CRUD</legend>
+		<table>
+			<tr>
+				<td><label for="">Id</label></td>
+				<td><label for="" id="qid"></label></td>
+			</tr>
+			<tr>
+				<td><label for="">Name</label></td>
+				<td><textarea  id="name" cols="30" rows="5"></textarea></td>
+			</tr>
+			<tr>
+				<td><label for="">a) </label></td>
+				<td><textarea  name="options" id="option1" cols="30" rows="5"></textarea></td>
+			</tr>
+			<tr>
+				<td><label for="">b) </label></td>
+				<td><textarea name="options" id="option2" cols="30" rows="5"></textarea></td>
+			</tr>
+			<tr>
+				<td><label for="">c) </label></td>
+				<td><textarea name="options" id="option3" cols="30" rows="5"></textarea></td>
+			</tr>
+			<tr>
+				<td><label for="">d) </label></td>
+				<td><textarea name="options" id="option4" cols="30" rows="5"></textarea></td>
+			</tr>
+			<tr>
+				<td><label for="">Right Answer </label></td>
+				<td><input type="text" id="rightAnswer"></td>
+			</tr>
+			<tr>
+				<td><label for="">Score</label></td>
+				<td><input type="text" id="score"></td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<table>
+						<tr>
+							<td><button id="addBt">Add</button></td>
+							<td><button id="deleteBt">Delete</button></td>
+							<td><button>Search</button></td>
+							<td><button>Update</button></td>
+							<td><button id="saveBt">Save</button></td>
+							<td><button id="loadBt">Load</button></td>
+							<td><button id="sortById">Sort</button></td>
+							<td><button>Clear</button></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<h2>Total Records are <span id="totalRecords"></span></h2>
+				</td>
+			</tr>
+		</table>
+	</fieldset>
+	<fieldset>
+		<legend>Question List</legend>
+		<table border="1">
+			<thead>
+			<tr>
+				<th>Id</th>
+				<th>Name</th>
+				<th>Option1</th>
+				<th>Option2</th>
+				<th>Option3</th>
+				<th>Option4</th>
+				<th>Rans</th>
+				<th>Score</th>
+				<th>Operations</th>
+			</tr>
+			</thead>
+			<tbody id="tablebody">
+				
+				
+			</tbody>
+		</table>
+	</fieldset>
+	
+</body>
+</html>
