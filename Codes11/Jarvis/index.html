@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="Translator.js" ></script>
+   <script>
+	   var translator = new Translator();
+	var config = {
+    from: 'en',
+    to: 'hi',
+    api_key: 'AIzaSyCgB5hmFY74WYB-EoWkhr9cAGr6TiTHrEE', // use your own key
+    callback: function (translatedText) {
+       document.getElementById("msg2").innerHTML=translatedText;
+		console.log('translated text', translatedText);
+        
+        // here you can use "speakTextUsingRobot"
+        // see below sections
+    }
+};
+
+
+translator.voiceToText(function(text) {
+	console.log("U SAID "+text);
+               document.getElementById("msg").innerHTML = text;
+          translator.translateLanguage(text, config); 
+	
+	
+	
+                
+});
+
+	</script>
+    
+    
+</head>
+<body>
+<h1 id="msg"></h1>
+<h1 id="msg2"></h1>
+<!--<input id="msg" type="text" x-webkit-speech />-->
+</body>
+</html>
