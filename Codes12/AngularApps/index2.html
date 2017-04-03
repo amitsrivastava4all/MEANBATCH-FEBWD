@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>SI Calc with AngularJS</title>
+	<script src="angular.min.js"></script>
+</head>
+<body ng-app>
+
+	<input type="text" placeholder="Type Pr" ng-model="pr" > {{pr}}
+	<input type="text" placeholder="Type Rate" ng-model="rate" >{{rate}}
+	<input type="text" placeholder="Type Time" ng-model="time" >{{time}}
+	
+	
+	<h1 >Simple Interest is {{(pr*rate*time)/100}}</h1>	
+</body>
+</html>

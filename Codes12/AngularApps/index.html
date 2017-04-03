@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>SI Calc</title>
+	<script>
+	function calcSimpleInterest(){
+		// 1 way data getting
+		var pr = document.getElementById("pr").value;  //get the value
+		var rate = document.getElementById("rate").value;
+		var time = document.getElementById("time").value;
+		document.getElementById("result").innerHTML = (pr * rate * time) /100;  // After Compute (Put the Value) 2 way data putting
+		//alert("Call SI ");
+	}
+	</script>
+</head>
+<body>
+	<input type="text" placeholder="Type Pr" id="pr">
+	<input type="text" placeholder="Type Rate" id="rate">
+	<input type="text" placeholder="Type Time" id="time" onchange="calcSimpleInterest()">
+	<h1 id="result"></h1>
+</body>
+</html>
